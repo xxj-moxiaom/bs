@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="materialize.css">
+    <script src="materialize.js"></script>
+    <title>QQ页面布局</title>
+    <style type="text/css">
+        body, ul, li, p, h3, h4 {
+            margin: 0px;
+            padding: 0px;
+        }
+        li {
+            list-style: none; /*去掉li标签默认样式*/
+        }
+
+        body {
+            background-image: url(img/bg.png);
+            background-repeat: no-repeat;
+            background-color: #E9E9E9;
+            background-position: 0 41px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        .top { /*顶部固定导航:固定定位*/
+            width: 100%;
+            height: 41px;
+            background-color: rgba(23, 23, 23, 0.85);
+            position: fixed;
+        }
+
+        .top .logo {
+            background-image: url(img/ico.png);
+            background-size: 595px 41px; /*缩小一倍*/
+            background-position: 0 0; /*设置背景图填充起始位置*/
+            height:41px;  /*设置大小*/
+            width:92px;
+            margin-right:30px;
+        }
+
+        .top li {
+            width:100px;
+            float:left; /*设置浮动使列表水平排列*/
+            text-align:center;
+            color:#fff;
+            line-height:41px;  /*设置单行文本垂直居中*/
+        }
+
+        .top li a {   /*设置<a>显示模式*/
+            display: inline-block;  /*转为内联块*/
+            width: 100px;  /*设置宽和高*/
+            height: 41px;
+            color:white;
+        }
+        .top li a:hover {  /*设置鼠标移入背景变色*/
+            background:#383838;
+        }
+        .top .right {
+            float:right;
+        }
+        .container { /*主体内容区:*/
+            width: 100%;
+            height: 1000px;
+            position: absolute; /*主体绝对定位*/
+            top:41px;
+            left:0;
+            right:0;
+            margin: auto;  /*主体内容水平居中*/
+            z-index: -1;
+        }
+
+        .container .header {  /*主体区头部*/
+            margin-top: 0px;
+            height:150px;
+            background-color: #ff501d;
+            /*background-color: lightgray;*/
+        }
+        .container .header .tips a{
+            color: #444;
+        }
+
+        .container .header .tips a+a{
+            float:right;
+        }
+        .container .header .user-info {
+            margin-top: 1px;
+        }
+        .container .header .user-info .photo {
+            float:left;
+        }
+        .container .header .user-info .photo img {
+            border: 3px solid white;
+            margin-right: 30px;
+        }
+        .container .header .user-info .nav {
+            float:left;
+            color:#ccc;
+        }
+        .container .header .user-info .nav li {
+            margin-top: 15px;
+            width: 100px;
+            float:left;
+        }
+        .container .header .user-info .nav li a {
+            color: #999;
+        }
+
+        .container .main {  /*内容主体区*/
+            position: relative;  /*设置定位父级*/
+            color:#a6a6a6;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .container .main .left {  /*内容区左侧*/
+            position: absolute;
+            top:0px;
+            left:80px;
+            height: 400px;
+            width: 200px;
+            background-color: rgba(237, 162, 131, 0.2);
+            border-radius: 5px;
+        }
+        .container .main .left h4 {
+            padding: 10px;
+            padding-left: 20px;
+            border-bottom:1px solid #1f1f1f;
+        }
+        .container .main .left ul {
+            text-align: center;
+            margin-top: 20px;
+            line-height: 40px;
+        }
+        .container .main .left ul a {
+            color: #a6a6a6;
+        }
+        .container .main .content { /*内容区*/
+            height: 800px;
+            margin-left:300px;
+            margin-right: 80px;
+            /*background-color: yellow;*/
+            background-color: rgba(237, 162, 131, 0.2);
+            border-radius: 5px;
+        }
+        .container .main .content h4 {
+            padding: 10px;
+            padding-left: 20px;
+            border-bottom:1px solid #1f1f1f;
+        }
+        .container .main .content li {
+            float:left;
+            margin-top: 20px;
+        }
+        .container .main .content li img {
+            width: 45px;
+            border-radius: 50%;
+            margin: 0 15px;
+        }
+        .container .main .content .text {
+            clear:both;
+            padding: 15px;
+            text-indent: 2em;
+
+
+        }
+        .container .main .content .text img {
+            width: 350px;
+            margin: 10px 30px;
+        }
+        .container .main .content .text p:last-child{
+            color:white;
+        }
+        .container .main .content .text p span:first-child {
+            display: inline-block;
+            float:left;
+        }
+        .container .main .content .text p span:last-child {
+            display: inline-block;
+            float:right;
+        }
+        .container .main .content .text p a {
+            display: inline-block;
+            width: 60px;
+            color:white;
+        }
+        .container .main .content > p {
+            margin-top: 20px;
+            border-bottom:1px solid rgba(255, 103, 55, 0.76);
+        }
+        .container .main .content .message {
+            background-color: #E9E9E9;
+            margin: 10px 50px;
+        }
+        .container .main .content .btn-submit {
+            float:right;
+            margin-right: 60px;
+        }
+
+        .container .footer {  /*页面底部*/
+            height: 200px;
+            /*background-color: #FD8008;*/
+            margin-top: 20px;
+            font-size:12px;
+            text-align: center;
+        }
+        .container .footer p {
+            color:black;
+        }
+        .container .footer p a{
+            color: black;
+        }
+        .container .footer p a:hover{
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<!-- 顶部固定导航区 -->
+<div class="top">
+    <ul>
+        <!-- 导航logo -->
+        <li class="logo"></li>
+        <li><a href="">个人中心</a></li>
+        <li><a href="">我的主页</a></li>
+        <li><a href="">好友</a></li>
+        <li><a href="">游戏</a></li>
+        <li><a href="">装扮</a></li>
+        <li class="right"><a href="">设置</a></li>
+    </ul>
+</div>
+
+<!-- 主体内容区 -->
+<div class="container">
+
+    <!-- 主体头部 -->
+    <div class="header">
+        <!-- 头像与说明与导航 -->
+        <div class="user-info">
+            <!-- 用户头像 -->
+            <div class="photo">
+                <img src="img/photo.gif">
+            </div>
+            <div class="nav">
+                <h3>多宝多</h3>
+                <p>
+                    <img src="img/vip1.png" width="60">
+                    成长值1成长速度-10点/天0%
+                    <img src="img/vip2.png">
+                </p>
+                <ul>
+                    <li><a href="">个人中心</a></li>
+                    <li><a href="">我的主页</a></li>
+                    <li><a href="">好友</a></li>
+                    <li><a href="">游戏</a></li>
+                    <li><a href="">装扮</a></li>
+                    <li><a href="">设置</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- 主体 -->
+    <div class="main">
+
+        <!-- 主体左侧 -->
+        <div class="left">
+            <h4>好友动态</h4>
+            <ul>
+                <li><a href="">好友动态</a></li>
+                <li><a href='orderCourse.html'>预约课程</a></li>
+                <li><a href=''>与我相关</a></li>
+                <li><a href=''>那年今日</a></li>
+                <li><a href=''>腾讯课堂</a></li>
+                <li><a href=''>游戏应用</a></li>
+            </ul>
+        </div>
+        <!-- 主体内容区 -->
+        <div class="content">
+            <h4>好友动态</h4>
+            <div class="user-intro">
+                <li class="image"><img src="img/user.jpg"></li>
+                <li class="intro">
+                    <p>天生是只狗</p>
+                    <p>2017年12月02日</p>
+                </li>
+            </div>
+            <div class="text">
+                <p>
+                    60天可以学会PHP编程吗？看了PHP中文网的教学计划,你就不会再怀疑啦！ 紧凑的课程安排,新颖的教学模式,全程学习监督,确保你的每一点进步,都将获得惊喜的回报~~ HTML,CSS,JavaScript,jQuery,Bootstrap,PHP,MySQL,ThinkPHP5...
+                </p>
+                <p><img src="img/jb.jpg"></p>
+                <p>来自 iPhone X</p>
+                <p>
+                    <span>浏览: 108 次</span>
+                    <span>
+							<a href="">转发</a>
+							<a href="">点赞</a>
+							<a href="">评论</a>
+						</span>
+                </p>
+            </div>
+            <p class="line"></p>
+
+            <ul>
+                <li><img src='img/frend.jpg'></li>
+                <li>
+                    <p>紫霞仙子 :<span>我猜到了开头,却猜不到结尾</span></p>
+                    <p>11月12日 16:22</p>
+                    <ul>
+                        <li><img src='img/user.jpg'></li>
+                        <li>
+                            <p>天生是只狗 :<span>其实一开始我就知道了结局,只是没想到会这么快</span></p>
+                            <p>11月28日 19:08</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <textarea cols="80" rows="3" class="message" placeholder="文明发言"></textarea>
+            <button type="submit" class="btn-submit">提交</button>
+        </div>
+
+        <!-- 主体底部 -->
+        <div class="footer">
+            <p>
+                <a href="">空间手机版</a> |
+                <a href="">黄钻贵族</a> |
+                <a href="">官方Qzone</a> |
+                <a href="">QQ互联</a> |
+                <a href="">认证服务</a> |
+                <a href="">腾讯博客</a> |
+                <a href="">腾讯客服</a> |
+                <a href="">QQ空间服务协议</a> |
+                <a href="">Complaint Guidelines</a> |
+                <a href="">粤网文[2017]6138-1456号</a>
+            </p>
+
+            <p>Copyright © 2005 - 2018 Tencent.All Rights Reserved.</p>
+
+            <p>腾讯公司 版权所有</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

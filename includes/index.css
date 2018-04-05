@@ -1,0 +1,236 @@
+body, ul, li, p, h3, h4 {
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    list-style: none; /*去掉li标签默认样式*/
+}
+
+body {
+    background-image: url(img/bg.png);
+    background-repeat: no-repeat;
+    background-color: #E9E9E9;
+    background-position: 0 41px;
+}
+
+a {
+    text-decoration: none;
+}
+.top { /*顶部固定导航:固定定位*/
+    width: 100%;
+    height: 41px;
+    background-color: #000;
+    position: fixed;
+}
+
+.top .logo {
+    background-image: url(img/ico.png);
+    background-size: 595px 41px; /*缩小一倍*/
+    background-position: 0 0; /*设置背景图填充起始位置*/
+    height:41px;  /*设置大小*/
+    width:92px;
+    margin-right:10px;
+}
+
+.top li {
+    width:100px;
+    float:left; /*设置浮动使列表水平排列*/
+    text-align:center;
+    color:#fff;
+    line-height:41px;  /*设置单行文本垂直居中*/
+}
+
+.top li a {   /*设置<a>显示模式*/
+    display: inline-block;  /*转为内联块*/
+    width: 100px;  /*设置宽和高*/
+    height: 41px;
+    color:white;
+}
+.top li a:hover {  /*设置鼠标移入背景变色*/
+    background:#383838;
+}
+.top .right {
+    float:right;
+}
+
+
+
+.container { /*主体内容区:*/
+    width: 1100px;
+    height: 1000px;
+    position: absolute; /*主体绝对定位*/
+    top:41px;
+    left:0;
+    right:0;
+    margin: auto;  /*主体内容水平居中*/
+    z-index: -1;
+}
+
+.container .header {  /*主体区头部*/
+    margin-top: 10px;
+    height:200px;
+    /*background-color: lightgray;*/
+}
+.container .header .tips a{
+    color: #444;
+}
+
+.container .header .tips a+a{
+    float:right;
+}
+.container .header .user-info {
+    margin-top: 50px;
+}
+.container .header .user-info .photo {
+    float:left;
+}
+.container .header .user-info .photo img {
+    border: 3px solid white;
+    margin-right: 30px;
+}
+.container .header .user-info .nav {
+    float:left;
+    color:#ccc;
+}
+.container .header .user-info .nav li {
+    margin-top: 15px;
+    width: 100px;
+    float:left;
+}
+.container .header .user-info .nav li a {
+    color: #999;
+}
+
+.container .main {  /*内容主体区*/
+    position: relative;  /*设置定位父级*/
+    color:#a6a6a6;
+    font-size: 14px;
+
+}
+
+.container .main .left {  /*内容区左侧*/
+    position: absolute;
+    top:0;
+    left:0;
+    height: 520px;
+    width: 170px;
+    background-color: #2e2e2e;
+    border-radius: 5px;
+}
+.container .main .left h4 {
+    padding: 10px;
+    padding-left: 20px;
+    border-bottom:1px solid #1f1f1f;
+}
+.container .main .left ul {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 40px;
+}
+.container .main .left ul a {
+    color: #a6a6a6;
+}
+
+.container .main .right { /*内容区右侧*/
+    position: absolute;
+    top:0;
+    right:0;
+    height: 520px;
+    width: 300px;
+    /*background-color: green;*/
+    background-color: #2e2e2e;
+    border-radius: 5px;
+}
+.container .main .right h4 {
+    padding: 10px;
+    padding-left: 20px;
+    border-bottom:1px solid #1f1f1f;
+}
+.container .main .right li {
+    float:left;
+    margin-top:20px;
+    margin-left: 20px;
+}
+.container .main .right img {
+    width: 72px;
+    border-radius: 10px;
+}
+
+.container .main .content { /*内容区*/
+    height: 800px;
+    margin-left:180px;
+    margin-right: 310px;
+    /*background-color: yellow;*/
+    background-color: #2e2e2e;
+    border-radius: 5px;
+}
+.container .main .content h4 {
+    padding: 10px;
+    padding-left: 20px;
+    border-bottom:1px solid #1f1f1f;
+}
+.container .main .content li {
+    float:left;
+    margin-top: 20px;
+}
+.container .main .content li img {
+    width: 45px;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+.container .main .content .text {
+    clear:both;
+    padding: 15px;
+    text-indent: 2em;
+
+
+}
+.container .main .content .text img {
+    width: 350px;
+    margin: 10px 30px;
+}
+.container .main .content .text p:last-child{
+    color:white;
+}
+.container .main .content .text p span:first-child {
+    display: inline-block;
+    float:left;
+}
+.container .main .content .text p span:last-child {
+    display: inline-block;
+    float:right;
+}
+.container .main .content .text p a {
+    display: inline-block;
+    width: 60px;
+    color:white;
+}
+.container .main .content > p {
+    margin-top: 20px;
+    border-bottom:1px solid #1f1f1f;
+}
+.container .main .content .message {
+    background-color: #E9E9E9;
+    margin: 10px 50px;
+}
+.container .main .content .btn-submit {
+    float:right;
+    margin-right: 60px;
+}
+
+.container .footer {  /*页面底部*/
+    height: 50px;
+    /*background-color: #FD8008;*/
+    margin-top: 20px;
+    font-size:12px;
+    text-align: center;
+}
+.container .footer p {
+    color:black;
+}
+.container .footer p a{
+    color: black;
+}
+.container .footer p a:hover{
+    text-decoration: underline;
+}

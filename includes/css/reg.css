@@ -1,0 +1,35 @@
+
+.container {
+                          max-width: 100%; /*设置最大宽度为固定值*/
+                          margin: 0 auto;  /*设置内部子块元素左右居中*/
+                      }
+.header {
+    height: 100px;  /*只需设置高度,宽度继承父元素*/
+    background-color: #f3d6ac;
+}
+.main {
+    height: 700px;  /*只需设置高度,宽度继承父元素*/
+    padding-left: 200px;
+    /*background-color: honeydew;*/
+    background-image: url("../img/bg3.jpg");
+}
+.footer {
+    height: 100px;  /*只需设置高度,宽度继承父元素*/
+    background-color: #f1d3ad;
+}
+.box3 {
+    width: 500px;
+    height: 700px;
+    padding-top: 1px;
+
+    /*以下二个声明可以使块级子元素垂直居中*/
+    display: table-cell;  /*设置显示方式为表格单元格*/
+    vertical-align: middle; /*设置该单元格内的元素垂直居中*/
+
+}
+.child{
+    width: 400px;
+    height: 500px;
+    margin: auto;  /*水平居中*/
+
+}
